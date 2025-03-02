@@ -11,8 +11,7 @@ COPY package.json yarn.lock ./
 RUN npm install -g corepack@latest && corepack enable
 
 # Install dependencies
-RUN yarn install --immutable --prefer-offline
-
+RUN yarn install --immutable
 # Copy project files
 COPY . .
 
